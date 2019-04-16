@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Related Work}{}% 2
+\BOOKMARK [1][-]{section.3}{Data Set}{}% 3
+\BOOKMARK [1][-]{section.4}{Replication}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Stopwords Removal}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Feature Selection}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Classification and Validation}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Information Extraction}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Results}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{RQ1: To what extent do developers discuss design?}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{RQ2: Which developers discuss design?}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 12
+\BOOKMARK [1][-]{section*.11}{References}{}% 13

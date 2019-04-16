@@ -1,0 +1,79 @@
+% !TEX root = main.tex
+\section{Data Set}
+\label{sect:dataset}
+The authors of the original paper took 90 projects that was present in the GHTorrent data set~\cite{Gousios2013} and discarded 13 projects due to having less than 50 discussions. In total they selected 77 projects with 102,122 discussions. Then out of the 77 projects, they randomly selected 5 projects. Then they randomly selected 200 discussions from each project, totaling 1,000 discussions for manual classification. Then the 1,000 discussions were manually classified by two individual authors of the paper. After the manual classification, 967 discussions were taken in which the classification by both authors matched. The 1000 discussions they took were randomly taken from five projects. Also they did not discuss or specify any rules for the manual classification of the 1,000 discussions. Due to the randomness of the data and the classification choice being very subjective, it is impossible to replicate the data they used. So we decided to contact them for their corpus of 1000 discussions and they provided us with the data. Also the 77 projects they took were not specified either. So we used their processed data from the GHTorrent database.
+
+\noindent\textbf{discussions.csv}--- contains the 967 sentences that are manually classified by two of the authors of the paper, 226 (23\%) of these refer to `design' points and 741 (77\%) of them are other issues labeled as `general'. A sample of the file is shown in Table~\ref{tbl:discussions.csv}
+\begin{table*}
+	\centering
+	\caption{Data sample in discussions.csv}
+	\label{tbl:discussions.csv}
+	\begin{tabular}{lccc} 
+		\toprule
+		\textbf{Discussion Text} & \textbf{Label}  \\
+		\midrule
+		Did you send a bug report comment upstream or something because otherwise we are gonna have to fix this again with the next version of assimp & general \\
+		SSL contexts shouldnt be reused across connections see So its probably more appropriate to pass in factories directly & design \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+\noindent\textbf{rq\_1.csv}--- is a data file with 5,86,839 lines of data. Each line represents three columns separated by a space. The first column points to the repository and project name separated by `/'. The second column provides information about whether this discussion comes from an issue, commit or pull request with the associated commit, issue or pull request number. The third column represents the label that the classifier assigned. Table~\ref{tbl:rq_1.data} shows a sample of the data that this file contains.
+\begin{table*}
+	\centering
+	\caption{Data sample in rq\_1.data}
+	\label{tbl:rq_1.data}
+	\begin{tabular}{lccc} 
+		\toprule
+		\textbf{Repository/Project} & \textbf{Event Category with Number}  & \textbf{Label}  \\
+		\midrule
+		akka/akka & akka/akka-commit\_comments-d9e0088f3cc537ea342f6fc4e99ee5319dfc94ae & general \\
+		akka/akka & akka/akka-commit\_comments-3ce3f270dfce5da7aa5b6270b0559e2c3c0fff6f & design \\
+		ariya/phantomjs & ariya/phantomjs-issue\_comments-10045 & design \\
+		antirez/redis & antirez/redis-issue\_comments-160 & general \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+\noindent\textbf{rq\_2\_a.data}--- also contains 5,86,839 lines of data divided into four columns by single space that represents username of the contributor, commit/issue/pull request with respective number, label of the discussion and repository name/project name respectively as shown by the sample in Table~\ref{tbl:rq_2_a.data}.
+\begin{table*}
+	\centering
+	\caption{Data sample in rq\_2\_a.data}
+	\label{tbl:rq_2_a.data}
+	\begin{tabular}{lccc} 
+		\toprule
+		\textbf{Username} & \textbf{Event Category with Number}  & \textbf{Label} & \textbf{Repository/Project}  \\
+		\midrule
+		viktorklang & akka/akka-commit\_comments-d9e0088f3cc537ea342f6fc4e99ee5319dfc94ae & general & akka/akka \\
+		jboner & akka/akka-commit\_comments-a3026b3316dc5b34c3d37ce6fc56cc44bac1d561 & design & akka/akka \\
+		antirez & antirez/redis-issue\_comments-646 & general & antirez/redis \\
+		patriknw & akka/akka-pull\_request\_comments-149 & general & akka/akka \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+\noindent\textbf{rq\_2\_b.data}--- is a narrowed copy of `rq\_2\_a.data' that contains the username of the contributor, repository/project name and commit, issue or pull\_request with number that points to only the design label.
+
+\noindent\textbf{rq\_2\_a\_c.data}--- hold 23,293 lines of data that is divided into three columns. The first column represents the repository name/project name, the second column shows the user name of the contributor. The last column points to the number of design discussions the user in the previous column addressed in the project defined by the first column. Table~\ref{tbl:rq_2_a_c.data} shows the sample of data in the file.  
+\begin{table*}
+	\centering
+	\caption{Data sample in rq\_2\_a\_c.data}
+	\label{tbl:rq_2_a_c.data}
+	\begin{tabular}{lccc} 
+		\toprule
+		\textbf{Repository/Project} & \textbf{Username} & \textbf{Involvement in design discussions}   \\
+		\midrule
+		zurb/foundation & stewarty & 1 \\
+		rails/rails & hassox & 1 \\
+		rails/rails & stjhimy & 1 \\
+		twitter/finagle & kolbasov & 1 \\
+		cakephp/cakephp & atkrad & 1 \\
+		zendframework/zf2 & ravids & 1 \\
+		symfony/symfony & jdhoek & 6 \\
+		joyent/node & paulfryzel & 1 \\
+		mxcl/homebrew & hackdefendr & 9 \\
+		\bottomrule
+	\end{tabular}
+\end{table*}
+
+   

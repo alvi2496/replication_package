@@ -1,0 +1,40 @@
+% !TEX root = main.tex 
+\section{Replication}
+\label{sect:replication}
+We strictly followed the steps demonstrated in the paper. While replicating, we took the following steps:
+
+\subsection{Stopwords Removal}
+Stopwords are words that have the similar likelihood of occurring in documents regardless of the relevance of the query~\cite{Wilbur1992}. It is very important to remove stopwords to improve the performance of the classifier as well as reducing the size of the dataset. We have used the The \emph{Natural Language Toolkit's (NLTK)}\footnote{NLTK, https://www.nltk.org/}~\cite{Loper2002} english stopwords set to primarily remove some general stopwords. Then we have looked for some document specific stopwords ex. `lgtm' which is short form of `looks good to me' and removed them. The before and after status of a sentence for stopwords removal can be seen in Table~\ref{tbl:stopwords_removal}
+  \begin{table}
+  	\caption{Sample of sentence status before and after stopwords removal. The sentence on the top is the actual sentence. The bottom one is after removing the stopwords  }
+  	\begin{tabular}{ p{3.25in}}
+	 	\toprule
+	  		Did you send a bug report comment upstream or something because otherwise we are gonna have to fix this again with the next version of assimp \\
+  		\midrule
+	  		send bug report comment upstream something otherwise gonna fix next version assimp \\
+  		\bottomrule
+
+  	\end{tabular}
+  	\label{tbl:stopwords_removal}
+  \end{table}   
+
+\subsection{Feature Selection}  
+\emph{Feature selection} is the process of selecting a subset of the terms occurring in the training set and using only this subset as features in text classification\footnote{https://nlp.stanford.edu/IR-book/html/htmledition/feature-selection-1.html}. Feature selection are used mainly for twos reason. \noindent\textbf{One}, it reduces the size of the effective vocabulary which is helpful to speed up the training for an expensive classifier like Decision Tree. \noindent\textbf{Two}, it often increases the accuracy by reducing the amount of noisy feature in a corpus. In the original paper, they combined two methods of feature extraction. \noindent\textbf{First}, they have found and ranked the bigram\footnote{https://en.wikipedia.org/wiki/Bigram} collection of other association measures by first constructing it for all bigrams in a given sequence. Then they have provided the Pearson's chi-square as the score to return the top bigrams. \noindent\textbf{Second}, they have counted every bigram by iterating through every word in the sentence to find out the pair and assigned a true/false value for them. Table~\ref{tbl:feature_selection} shows the dictionary after implementing combined bigram features.
+  \begin{table}
+	\caption{Sample of the dictionary of words that is returned after using combined bigram features. In the top: the original text after stopwords removal. In the bottom: The dictionary of combined word bigrams}
+	\begin{tabular}{ p{3.25in}}
+		\toprule
+		martijnvg seems reasonable done \\
+		\midrule
+		{`martijnvg': True, `seems': True, `reasonable': True, `done': True, (`martijnvg', `seems'): True, (`reasonable', `done'): True, (`seems', `reasonable'): True} \\
+		\bottomrule
+		
+	\end{tabular}
+	\label{tbl:feature_selection}
+\end{table}
+
+\subsection{Classification and Validation}
+We have used Naive Bayes and Decision Tree classifier as the classification models for the sentences like they did in the paper. Also following them, we have also used 10-fold cross validation method to validate the performance of the classifiers. We have divided the whole dataset in 10 chunks containing almost 100 sentences in each chunk. Then we have taken 9 chunks to train our model and then tested it with the other chunk we left untouched. We repeated this procedure for 9 more times each time moving onto the next chunk to use it as test and the rest of them as train. We are calculating the accuracy of every pass which is essentially the fraction of corresponding values that are equal to the test label. Finally, we have calculated the mean of 10 passes to estimate the overall accuracy for each classifier. We have also estimated the performance of each classifier in terms of time. To do that, we have taken into account the difference between the start time of the classification and the end time. This can demonstrate the cost of each classifier in time.
+
+\subsection{Information Extraction}
+Due to the lack of clarification in the paper about which 77 projects were used and due to the randomness in choice of the 1,02,122 discussions that were taken from the 77 projects, we used the pre-processed dataset from~\cite{Brunet2014a} to extract the information needed for answering the research questions. We used a quantitative approach to extract different information from the \emph{.data} files. 

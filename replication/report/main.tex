@@ -1,0 +1,68 @@
+\documentclass[conference]{IEEEtran}
+
+% Please include packages in the following file:
+\input{packages.inc}
+
+% Please define macros in the following file:
+\input{macros-def.inc}
+
+% Instructions for inserting comments:
+%   \todo{t} for a TODO item
+%   \modified{t} to mark as modified
+% 	\nbb{t}{r} for inline region
+%	\internalnote{t} for side-notes
+%	\remarks{t} for inline comments in red
+%	\del{t} for strikethrough
+%	\ins{t} for suggestions
+% ... read the input file for more
+\input{comments.inc}
+
+\begin{document}
+\bstctlcite{MyBSTcontrol} % granular control for bib entries (cf. main.bib)
+
+% The title
+\title{Replication: Do Developers Discuss Design?}
+
+% The authors
+\author{
+	\IEEEauthorblockN{Alvi Mahadi\IEEEauthorrefmark{1}, Neil Ernst\IEEEauthorrefmark{1}}
+	\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Computer Science, University of Victoria, Victoria, Canada\\
+		\{amahadi, nernst\}@uvic.ca}
+}
+
+% Configure here to get the paper title
+\makeatletter
+\hypersetup{
+	pdftitle = {\@title},
+	pdfsubject = {SENG-480 graduate assignment: Replication report of~\cite{Brunet2014a}} 
+}
+\makeatother
+
+\maketitle
+
+\begin{abstract}
+In this work, we aim to replicate the findings of~\cite{Brunet2014a}. There are mainly two steps of this replication. The first step is to build the classifier pipelines using Naive Bayes and Decision Tree and achieve the result that is reported in the original paper. After doing that, we show that the Decision Tree works better in terms of accuracy. Then we have conducted an empirical study on the data classified with the classifier to replicate the (a) proportion of design discussions, (b) criteria of developers who discuss design. We have discussed our findings while comparing them to the original work. We can see an almost similar result with~\cite{Brunet2014a}.  
+\end{abstract}
+
+\begin{IEEEkeywords}
+design, discussions, classification, naive bayes, decision tree, empirical study
+\end{IEEEkeywords}
+
+% contents
+\input{01-introduction}
+\input{02-related-work}
+\input{03-dataset}
+\input{04-replication}
+\input{05-results}
+\input{06-conclusions}
+
+\section*{Acknowledgment}
+This work was conducted to fulfill the requirements of graduate assignment of CSC 578A under Professor Neil Ernst. We would like to thank the authors of~\cite{Brunet2014a} in particular Jo\~{a}o Brunet, for providing us with their dataset. 
+
+% TODO balance the columns in the last page (e.g., the bibliography)
+% \balance
+
+\bibliographystyle{IEEEtran}
+\bibliography{main}
+
+\end{document}
