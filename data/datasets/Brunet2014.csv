@@ -1,0 +1,1000 @@
+Did you send a bug report comment upstream or something because otherwise we are gonna have to fix this again with the next version of assimp,0
+SSL contexts shouldnt be reused across connections see So its probably more appropriate to pass in factories directly,1
+To create a Finagle Thrift service you must implement the ServiceIface Interface that a custom Thrift compiler generates for your service Scrooge wraps your service method return values with asynchronous,1
+I think its important to specify that the developer must implement ServiceIface and not Iface to make the example clearerisnotinvain that is a good idea,1
+btw if you want to retain the debugging information here its often useful you should probably either 1 use logging at a debug level or 2 pass a debug flag into the codec constructor,1
+How about to create a Finagle Thrift service you must use the custom Thrift compiler which can be found here regular thrift Iface interface a ServiceIface interface that wraps all return values in a Future which is required by Finagle,1
+If you want to make it overridable not declare it as static as override static methods many times give inconsistent behavior,1
+Youre hiding the SecureString dependency on allocatorsh by indirect include via serializeh,0
+makes sense here after the dependency is moved to class,1
+Without a doubt ideally there are no indirect dependencies anywhere but that would take a lot of knowledge about all files dependency fulfillment and usage,1
+Id rather avoid adding more dependencies in CAddrDB for something that isnt really used elsewhere,1
+This duplication is quite ugly Mikes refactor that moves these chaindependent constants to a separate class is nicer but you may want to check that it doesnt introduce new dependencies,1
+Well the remote routers need to handle the nodes setting which the local ones do not Hence there must be a translation between local and remote unless the RemoteDeployer would not use local parsing at all which is obviously even worse If that translation is part of the router interface so that the RemoteDeployer could do it generically then local routers need to know about their remote counterparts which is not possible due to cyclic dependencies between the packages,1
+We cant have external dependencies in akkaactor Therefore I have embedded the code You can continue work in your repository and we will copy it The long term goal is to push it down to scala library,1
+I changed the MultiNodeSpec to not depend on AkkaSpec or on a specific test framework and removed all dependencies to ScalaTest from the published artifacts,1
+The orgjboss dependencies shouldnt be present in the general interface,1
+Yes i struggled a bit with the dependencies here Do u think it would be better to send the publisher ref to the parent from core and start the metricstriggered on that,1
+Ill take a look at the ActorComponent and the Message dependencies when I have time,1
+True good catch Did think about it when I first saw the code to mention but thought FSM would mean more dependencies but now I see it is in akka actor,1
+This shouldnt be added into akka remote it should be a sub module to akka remote so people dont need the extra dependencies if they dont use rcl,1
+This implementation seems like there should already exist such a utility function amongst the dependencies try to find one and use that,1
+Im not a huge fan of adding dependencies even for tests can we avoid these,1
+Yes A FIXME should probably be added to the dependencies in AkkaBuild as well,1
+I think JavaLoggingEventHandler is a good thing An advantage over slf4j with jul is that it doesnt require any dependencies but I guess it solved some problem also,1
+Jut as a FYI comeaio will be dropped Ive added a ticket to move the things from orgjbossnettyakkautil to akkautil comtypesafeconfig will become an explicit dependency as well instead of an embedded one This will hopefully clean up the exportPackage,1
+Also there is an issue with Message dependency on CamelContext can you suggest any elegant way of getting rid of this dependency,1
+what is the advantage of this Base64 which adds another dependency over javanetURLEncoderULRDecoder,1
+You should also mention that you need to add akka remote as a dependency,1
+This is actually the simplest I could do to preserve the existing semantics An even better approach and one I want to do once someone can answer my questions on repercussions is to not dynamically depend on projects but to depend on the dependencyClasspath setting Using this we should be able to get all the dependent jars classpath directories and we can filter this to grab the relevant reference conf files Then were no longer used advanced sbt features and we might see more stability,1
+why is the kernel dependency needed,1
+I dont agree I think extensions should be registered on demand when first used Otherwise we have the dependency issue that ActorSystem need to know about all extensions or users need to configure all extensions they use,1
+Using ref single updatenewValue could be more efficient I know eliminating a read dependency can help in a DB transaction but not sure about in our STM implementation,1
+I need help with sbt as there are dependency conflicts,0
+The dependency on specs2 has been removed in order to lessen the pain of living close to scala master it would be great if you could check the plain text documentation and make that as good as possible instead thanks,1
+For the code changes: the current akka osgi module has the import for the org apache aries marked as optional so theres no runtime dependency preventing this from working in a plain OSGi environment but I can obviously separate that into a new module as well if you prefer And I can obviously make the changes to the public methods as well,1
+So akka testkit doesnt have a dependency on either ScalaTest or JUnit so the AkkaJUnitActorSystemResource is not part of the normal akka testkit,0
+Still getting rid of the hashmap in the selector can and IMHO should still be done This has no dependency on this PR however I will open a separate P for that change,1
+Looks great Patrik Since this is general purpose does it belong in util Or does that introduce an unwanted dependency on dispatch,1
+named parameter would make it more readable isClient false,1
+No this reads fine Using List or Vector as arguments is more readable It's only in the case where there is an explicit conversion that I think it needs to be overstated,0
+I prefer to[immutable.Seq] even though you get the same thing The intention is more readable This is the only place with to[Vector] that I could find,0
+I think that piece of code is deceptive Can we make it more readable,0
+I don't understand why this would be less readable but it's up to you,0
+in what way is this more readable than the original,0
+while I like short variable names here they are part of the API by being parameter names I recommend using slightly more readable ones cid particularly but I always confused by snr too I always think of signal-to-noise-ratio,1
+can this be written in a more readable way,0
+I prefer the code to be correct and readable first when we see that that is a performance problem we’ll fix it but not before,0
+can you use these constants in receiveGossip would make things more readable,0
+please reformat these to be more readable,0
+This split makes it all much more readable Very nice,0
+well let me explain where I come from this is for logging and the output should be useful for the one seeing it raw millis are not useful offsets are also not really useful because all those calculations in the head are not easy Hence my conclusion that if we include something then it should be human-readable,0
+I had a match before but it really doesn't add any value since I don't need the cast anywhere So I found the single isInstanceOf actually a bit more readable,0
+You're right That is unreadable without syntax highlighting,0
+Probably not I can expand it into two cases if that's more readable,0
+I actually find the case m MemberDowned MemberRemoved more readable,0
+I patched the CSS to make this readable in HTML but non breaking spaces are probably better Although they could mess with wrapping,0
+My experience is that looks unreadable for multi-word things but I have not tried it together with,0
+The benefits are more readable failure messages and two lines less could be used through-out,0
+this section is basically unreadable it would greatly benefit from some white space,0
+Looks great A lot nicer more readable and intuitive,0
+Very nice test I love how these multi-node tests becomes much simpler and more readable than the in-memory counterparts Also that a language and set of patterns for how to write these is emerging,0
+This is a actually a chapter that would be more readable if split into Java Scala since it's more sample than text,0
+But I also try to limit the scope of the ticket I already did some cleaning to make it easier readable,0
+You can make this more readable by using the implicit conversion available in,0
+Yes I'll add that to the comments so things might be more readable,0
+please somehow demarcate the end of the constructor arguments given scalariform indentation rules this probably means adding an empty line,0
+In doc code we have switched to 2 space indentation for java code also and line breaks after some 70 chars unsure about the exact number,0
+please fix indentation,0
+I'd add some indentation of the whole config and fix formatting of next line,0
+Nah it looks like you've changed indentation,0
+This is a bit half baked isn’t it Either do it fully with nice indentation or leave it on one line,0
+someone broke you indentation,0
+Are you gonna blame Eclipse for this hideous indentation,0
+Wrong as in 3chars or wrong as in the code block has wrong indentation,0
+wrong indentation,0
+yes and I think scalariform indentation will be wrong if placing it above the case,0
+indentation,0
+indentation braces fixed Ready,0
+Why 4 spaces indentation mixed with 2 Matters since it is part of docs IMHO,0
+Use 2 spaces indentation below,0
+So it appears that this singleton scheduler serves some purpose,1
+I still think it would make sense to take and stash handOverData during the entire lifetime of the singleton,1
+that would not be a very well behaving singleton should be documented,1
+Should it be ClusterSingletonManager and the child is the actual singleton,1
+that would not be a very well behaving singleton should be documented,1
+a factory which can be instantiated without constructor arguments,1
+same thing at other places that use props factory method pattern,1
+At some point I added factory methods for message to CamelExtension so messages could only be created from camel instance which should be available from every actor,1
+Shouldn't this use the systems threadfactorys ClassLoader,0
+This will be used automatically if you use the factory method do not pass in a loader and the context loader is non null,1
+A factory to create MessageQueues for an optionally provided,1
+From user api its Companion object providing factory methods,1
+I think this should be accompanied by a factory which accepts and has the appropriate WARNING signs uses,1
+Why different order of args in this factory method compared to the constructor,0
+I would recommend offering a static factory method which takes an and makes such a top-level supervisor and then an method which takes a supervisor message,1
+instead of an the factory method should take an so that you can also create the supervisor below another,1
+You may in your class extending ActorSystemActivator override the getActorSystemConfig,1
+if we make Actor an abstract base class we will break literally every user code base that exists,1
+Should this class be public,1
+Should this class be public,1
+can you change seenBy and getSeenBy to private That should only be internal api,1
+We could store things in a WeakHashMap to not leak classes and class loaders,0
+That is handled by the caller This class has no access to settings,0
+The Send class here is intentionally mutable (through the ByteBuffer) because we want to work with a single instance until its buffer has been encrypted completely,1
+Why is MixMetricsSelector both a case class and a case object and the case object neither extends the class nor returns a cached default value Is MixMetricsSelector case-class mutable I vote for removing the case object MixMetricsSelector,1
+created a separate class for SystemGuardian,1
+Should we put this in the base class so we do not need to override it and type the same thing every test We can still override if needed,1
+The two other constructors have been added to allow Java users to use the ActorSystemActivator but if you want this third option to be available for Java users as well I'll refactor this class to have a protected strategy method that people can override to achieve the same goal,1
+should this be public,1
+yes this should be public exposing the class was the whole point of the refactoring,1
+Should we put this in the base class so we don't need to override it and type the same thing every test we can still override it,1
+This is not supposed to be used externally but it is not clearly marked as such,1
+That method signature change is package protected so it's not reachable,0
+As we talked about it should use an ExecutorServiceConfigurator so it can be managed externally,1
+this class is an internal structure EndpointRegistry This is only used by EndpointManager who does the check and who gets the Quarantine command from the external worlds,0
+True will make public again On the other hand we have other places which require external implementors to put their code in the akka package,1
+No this is cheating by using low-level API that shouldn't even be exposed,1
+Since the SelectionHandler ref is not exposed to the user the only ones who can potentially call assign a watch are ourselves control for what actors we are seeing Terminated events which are only children,1
+Method is exposed to subclasses to be able to implement custom routers based on mailbox and actor internal state,1
+is not existenceConfirmed also an implementation detail that should not be exposed to users,1
+Would it be possible to make actor accessible in the public API,1
+I agree to this as the most important reason It gives us freedom to evolve the api without breaking user code,1
+we can add new methods to Context without accidentally breaking peoples Actors,0
+Why do we want to make the user type more by removing all the methods from Actor,0
+Why does it return a RoutedActorRef leaking implementation detail,1
+Should this class be public,1
+Should probably use composition instead of inheritance,1
+UnsupportedActorRef already implements ScalaActorRef,1
+Is this a public method intended for end-user usage,1
+RoutedActorRef is going to be a part of the API just like the LocalActorRef where you can do Router specific stuff on like adding removing,1
+Why does this class extend ScalaActorRef,1
+But to do a redesign on this part I do not consider a part of this already to big task we both agree upon that the current approach is not very extensible,1
+Should this class be public,1
+If it should be part of the Api like the LocalActorRef or the RemoteActorRef it should But I do not like making abstract classes part of the API instead of interfaces,1
+This is how it is implemented in the ClusteredActorRef the design of the RoutedActorRef was based on,1
+Can not that be solved with overloading,0
+Not through these methods I suggested that the current design is not very extensible for this reason but that is how it was modelled with the ClusterActorRef based on It certainly isn not the way how I would have modelled it,1
+I'm still unsure if we should expose implementation details or not we should discuss it,1
+think the doc tests should be updated to not use isTerminated,1
+I still think the doc tests should be updated to not use isTerminated since that is user API,1
+One reason to not use Akka actors could be that the Akka actors may be dependent on the Index class If the test class is dependent on Akka actors,1
+Any internal usages that should be updated,1
+I think the deprecation and the refactoring should be kept separate as one is changing user API and one is internal implementaiton details,1
+Create another ticket if you do not want to change the internals,0
+I agree that this shouldn't be exposed at all it still best way to avoid reinventing the wheel is to use the BatchingExecutor,1
+is SchedulerException ever exposed to users Make it private,1
+The events need to be private and should not be exposed They are for internal use only Users can use awaitActivation methods from Activation,1
+I will make it private to not confuse users It is just that other internal events are published in akka as public classes,1
+ok if I make it private,1
+it does not have to but it is only used here close connection to the binarySearch I can make it private if you prefer that,1
+No I mean it is in the camel.internal package and is private since it is for the ActivationTracker put in the ActivationTracer companion and make it private,1
+Might be dangerous in the wrong hands Feel free to remove it,1
+We discussed it some time ago And we reached the agreement that it is dangerous as they are internals and we are not prepared to expose them as they are exposing the internals of implementation and break encapsulation,1
+Seems a bit dangerous to me it can go in for now but in the future it might make sense to think about a cleaner way of FSM composition,1
+This is the most dangerous initialization pattern presence of circular dependencies,1
+The events need to be private and should not be exposed They are for internal use only Users can use awaitActivation methods from Activation,1
+I have made them internal again,1
+minimize exposure,1
+This whole structure is specific to this actor and should not be used anywhere else,1
+It is not the job of this structure to enforce that it makes sense to throw an exception in that case,1
+this message as well as all others underneath INTERNAL should not be publicly visible,1
+This should not be here this is specific to the TestTransport,1
+Can we solve all those in some more elegant way some implicit conversion that is only for internal use,1
+Since it seems to be used mainly for sending system message I think it's good enough if we make an internal utility method,1
+I would be surprised if this is the way to create class RoutedActorRefs,1
+No this is cheating by using low-level API that shouldn't even be exposed,1
+immutable IndexedSeq as api type Perhaps this is just internal,1
+this should go inside RemoteWatcher that use props factory method pattern,1
+well for these internal actors that are not intended to be remote deployed it must be better to define all props in the props factory,1
+I think a proper fix is to be able to pass in a ClassLoader to createActorSystem it should not default to class this overrides Thread.getContextClassloader,1
+should we make it to make it consumable for java otherwise these should be INTERNAL API,1
+It should then be marked as INTERNAL API it is public from java,1
+The reason for private is that it is used by the RecoverOnRestart class will become either INTERNAL API or private,1
+What about moving the above preStart implementation to Processor and make it final so that concrete processors can only override preRestartProcessor,1
+How about moving these into akka util,1
+concrete processors should override preRestartProcessor and postRestartProcessor if needed,1
+Is there a reason for exposing CompactByteString and ContByteString as return types of the public api should not be a concern to the user just like users should not need to deal with Map1 A user should never be using the CompactByteString object as the ByteString object should be creating compact ByteStrings but the abstract ByteString class should just be returning ByteString,1
+I wanted to ByteStringCompact next to ByteString1 and ByteStrings to keep the three implementations together and so that ByteStringCompact has access to things which are private though currently the critical stuff is all private,1
+Should this create the Props only Passing ActorRefFactory if actor context and potentially using it in the wrong place outside the actor,1
+I understand the issue of using an actor context in the wrong place but can you prevent that at all an actor could reply the context to a sender the context is then used in the onSuccess callback,1
+currentMessage won't be called if users follow the msg approach discussed It will be called only if users create new outbound messages via This could be another good reason to recommend the msg approach inside processors,1
+There should also be a section about the actual ask change move from ActorRef to pattern,1
+think some more things are needed in the migration kit Add the needed implicit conversions in OldActor so that existing code works inside actors,1
+Add needed implicit conversion in this package scala file so that existing code works outside actors,0
+Document as internal and make final,1
+We can not really get away from exposing Node if we move it into a field instead but the problem is that there is no getAndSet on Unsafe so it can not use LOCK So I will move in isEmpty into AbstractNodeQueue and add count,1
+I would definitely recommend making DeadLetterActorRef a subtype extend of EmptyLocalActorRef and remove DeadLetterActorRefLike,1
+why is this class public and not documented guessing this should be private and documented as internal users will be able to use private,1
+any risk with that we can not change this one would it be possible to move to context,0
+protected or prevent subclassing by user code,1
+I think this class can be private,1
+ActorRefProvider does not expose a reference to its ActorSystem which is a good idea because of initialization order,1
+A factory to create MessageQueues for an optionally provided ActorContext,1
+protected is weaker than protected so what are you saying Subclassing applies to ActorSystem or ActorCell,0
+I do not see any value in hiding it The rest of the ActorPath handling is also not private,1
+So you do not want people to implement MessageDispatcher,1
+it probably makes more sense to mark as private packages these classes provide the most convenient way for passing along the correct,1
+eaio will be removed I have added a ticket to move the things from org.jboss.netty.akka.util package to akka.util package,1
+config package will become an explicit dependency as well instead of an embedded one clean up,1
+We will make them package protected,1
+Are the things from netty package only used internally or should they be exposed in the API If just internal you could consider to put them into akka util package,1
+I suggest to just wrap in a RemoteTransportException and rethrow and let the layer above decide if it should be logged or not,1
+Just wrap in a RemoteTransportException and let the caller decide if it should be logged or not,1
+This should be private and be documented as internal api,1
+Should not getChild be only in UntypedActorContext,1
+ActorCell class must implement both and ActorContext does not expose the Java variant,1
+This should be pulled out of the trait since it is a constant put move in some object,0
+These should be in a companion object like usual,1
+Should not this be in a companion object,1
+If the extension you have a reference to ExtendedActorSystem,0
+LoggingAdapter does not belong in akka package class If you want to log directly then you should use that api directly,1
+it allows the Akka Logging API to be used outside of Actor systems,1
+An advantage is that it does not require any dependencies,1
+Instead of directly calling into the ConcurrentSocketActor through methods like connect bind you should send messages to the actor,1
+you are calling out to the methods of the Actor which is a violation of the ActorModel model why not put the connect methods inside the funciton they used internally in the actor,1
+they are only invoked from select and should not be invoked from any other site either inside or outside the actor,1
+so move them into the select function so that they are only reachable from within it,1
+I think it is better to create the actor inside the newSocket method and pass the supervisor into it,1
+this method is only ever used in receiveFrames you might as well move the method definition into receiveFrames,1
+will this be exposed in some way in Spray to serve static content,1
+do we need to expose this in ActorRefProvider interface,1
+Since this is all so similar and now in quite a thought through state I am going to take a crack at refactoring it to one generic solution,1
+reverted to the original code still like to have some comments to those Providers though since these design desicions are undocumented,1
+LGTM,0
+LGTM,0
+LGTM,0
+Nice Would the code be clearer if the run-method would be named differently,0
+Nice catch,0
+Nice one,0
+Nice catch If we leave it a weak limit then we should document it,0
+Nice catch,0
+I can rename it to initialiseAndGetSSLHandler or more verbose,0
+Avoid this branching here by concating the empty list in case it is not defined and a List with the one item if defined,0
+I would not check for nulls here,0
+I would probably escalate this as this is a serious security issue,1
+I do not really like methods with innocent sounding names like getX that do a whole lot more than just getting something,0
+Any suggestions as how to improve on this,0
+Good rename,0
+Will rename to Settings,0
+this reads a bit too generic should we rename Message to Persisted,0
+Weird if the test passes,0
+this test name suggests more than the test actually verifies,0
+this is a neat test harness,0
+We should enumerate which tests we need,0
+This may be the cause of the instabilities we have seen with the tests We have already got rid of most of the isTerminated but this instance was forgotten,0
+without it this test fails,0
+Let us verify that again but I think it had something with test protocol not registered which is a good error to log,0
+then I misunderstood the error message I will revisit that and probably have to delete that test or do you have a suggestion of how to test,0
+has it been tested on linux,0
+first run on jenkins was successful which does not mean that it is fixed but anyway a good start,0
+I have run the test locally hundreds and hundreds of times without being able to reproduce it,0
+Added a test that will start failing when this bug is fixed,0
+we never loop around when order becomes Concurrent so it can not really be that here,0
+That is the beauty with actor logging you do not need to get the loop on the same stack,0
+What about returning 0 here to handle potentially enqueued commands It is not immediately clear to me that this can not be an infinite loop in the worst case,0
+alright do you prefer to do the removal inside the above loop,0
+ok we will keep the test I have changed the loop count Will merge,0
+Closed is for we do not have an underlying transport yet while WaitActivity is for we are waiting for activity on the underlying transport Incoming connections logically start out in the second stage the first stage happens unbeknownst to us,1
+It will probably change the order on the class path while running the testkit tests but it has no effect and is not intentional Just residue from the first rewrite,0
+SIGAR returns 3 while jmx returns 1 There is no requirement to return 1 or 3 and one minutes is good,0
+The variant Viktor proposed will actually run the refresh() while I was referring to making the sending of RefreshCache messages recurring While those messages could potentially pile up running the refresh job should be fine if it is done synchronously I still think that the scheduleOnce approach is the easiest to grasp and also it does not leave state lingering around which needs to be cleaned up,1
+Not likely but lets open a ticket about fixing all such occurences separately,0
+so if someone sends this a buggy message we do not want it logged in unhandled,0
+found the bug in the throttler,0
+still smells like a bug is hiding in there somewhere,0
+This fix is still relevant because you expect to be able to call getBodyAs several times with the same result adding a debug log stmt should not break things,0
+Always good idea and indeed found a bug Two more tests are in now,0
+we normally use unique names of the barriers to simplify debugging and this tests had already one,0
+t does not check if it is an event it could be some stray message and then it will not get sent to unhandled and it is hard to debug,0
+I would probably log the exception at debug level,0
+No It is a bug... Sigh,0
+that is a bug and a actually a very stupid one It is duplicated further,0
+ouch debug residue,0
+Debug residue removing,0
+Debug residue removing,0
+I am using a debugger to see what is going on Will do proper debug logs next,0
+Removed Was only used for debugging,0
+bug I fixed it for the cause case but not the my no cause case,0
+To aid in debugging might be nice to know why the message did not get through,0
+Because newMemberSet is a Set but I need it to be a SortedSet See the comment about bug in Scala There is no CanBuildFrom for SortedSet,0
+mistake by me changed from debug when debugging fixing now,0
+very strange indeed It would be possible to work around that compiler bug it is adding the generated closure to the public static members but it is broken presumably because it is indeed nested within the by using lazy val but that is too expensive for this minor wart,0
+BTW it is worth mentioning here that those log at DEBUG level and you must enable debug log level with,0
+Should include more debug info which consumer,0
+Might want to include some more debug info about which actorref did not manage to activate within how long,0
+It is scalariform Only happens for align parameters setting which we use I filed a bug,0
+othewise it is a bug in the scheduler,0
+Yep good idea I used that block for debugging at one point which is why it is so verbose,0
+Also you have a bug you a preprending that to that instead of this which means that you are lacking a test,0
+no this was not the bug but this is clearly not correct it should do records.filterNot(_.observer == observer),0
+this does not really prune anything is this the bug you meant,0
+Nice catch That was a subtle bug,0
+I was looking for a way to reduce unhelpful logging output without disabling stack traces completely so that for certain debugging cases users can turn it back on ideally without needing to recompile,0
+can not we change this Array to this bug is just another sign that the small performance advantage of array when parsing the original string is not worth it,0
+It helps debugging and no security is violated as there is none,1
+I like this name change,0
+Just looking at the property name I thought it was something else I was thinking timeout on the sender side that it expects the ack within this timeCould we use something else than timeout flush,0
+String.valueOf(rawValue),0
+Yes make sense also for IndexedSeq above,0
+pattern match since you are grabbing the values anyway,0
+please move comment before if to make it align properly,0
+If we make it optional then we would have to require either an id or a manifest to be able to deserialize the message,1
+The problem is not reproducible with this fix the problem will be easier to debug if it manifests again,0
+The return value is only used in one place line 195 where the whole bug fix originated,0
+bug fixed,0
+I introduced a bug in previous refactoring I will update test and fix,0
+So I conclude that the bug is fixed until proven otherwise,0
+I have addressed almost all review comments so far some of the triggered some more major refactoring See the above commits I will continue the work on the actual router next week,1
+I have added instructions to the comments Changing how this is generated is ticket,0
+I hope not that is an interesting test to join when already joined please create a ticket,0
+Yeah we have already talked about that If there is not a ticket already add one,0
+no it is the same for all but that is a possible improvement as mentioned in the comments about DataStream,1
+Absolutely Will add comments,0
+since I feel a lack of comments from my side on this PR is not acceptable I have no choice but to say,0
+Same comments as above,0
+Excellent thanks Please create a branch off of master and open a pull request with the renames comments,0
+Thanks for the review Ronald I will pick up your comments tomorrow morning,0
+I think these comments were left over from the previous pull request,0
+Ok that is probably a good idea There are too many comments here now to see what is what,0
+No need just do as the comments that follow say,0
+we actually tend to fix up such things by amending the commit and pushing with github is smart enough to figure it all out keeping the PR history and comments intact,0
+Updated according to review comments,0
+All comments have been addressed Should be picked up by the Kitteh,0
+Aside from last batch of comments LGTM,0
+I have not followed the problems so I do not have any valuable comments here,0
+Thanks for the changes I added some minor coding style related comments I vote for merging after those have been applied,0
+ok I have removed the vals but want comments so some curlies and newlines,0
+we have a convention to use square brackets around variables in log and exception messages,0
+we have used BeforeAll and a static system variable at some other places,1
+I think our convention is to use around variable data in log messages at least Jonas has pointed that out for me,0
+while I like short variable names here they are part of the API by being parameter names I recommend using slightly more readable ones,0
+A closure is a lambda expression with free variables which are bound to the enclosing lexical context the core feature is that it transports these bindings out,1
+our convention is to enclose variables in square brackets in log and error messages,0
+the if expressions could now be inlined I think that was not previously the case because everything was on two lines,0
+Done although personally I do not like nested expressions so I keep the 2 step approach But  I have simplified the toString stuff,0
+If you mean negative delay not negative drift then the max 1 guards for negative delay in the expression,0
+I agree better remove all custom control structures and use normal if expressions the gain of the custom syntax is not worth its own cognitive weight,1
+the if expressions could now be inlined I think that was not previously the case because everything was on two lines,0
+btw I do not know what is considered a complete rewrite While the structure of my code is very different the getNextState method is the same and the vectors cclass and states are just the evaluated versions of the original ones that had expressions there,1
+This val could be eliminated by just moving the expression into the first call of offerElement eliminating the risk of the nanos val being improperly used in the code block,1
+the local def was only used to get around the old clunky syntax can make it nice and slick in one expression now,0
+Only used in one place inline expression there,0
+The flow method acts as the delimiter of flow expression composition,1
+Type in expressions to have them evaluated,0
+Is this line safe,0
+Sorry I was looking at the wrong word yeah for the may in line 82 I leave it as is,0
+I meant to ask why this line is not moved three lines up,0
+I think that is problematic from the command line script,0
+header line here,0
+this header line is wrong remove,0
+I would suggest switching to either Vector or a mutable append data structure to avoid reverse on line 28,0
+I will remove my link and see if the docs still build If they do then we can probably get rid of that line altogether,0
+Is not there a stray in the line 10 TimeUnit SECONDS,0
+Why this line here,0
+look on the line above also checked when reading the config,0
+when using one parameter per line it is preferred to start the first one on a new line,0
+Yes no extra line there either,0
+Ideally line breaks should be done virtually by formatting in your editor Since that is not the case I do not think we should sacrifice readability for people using unix terminals 120 is a good modern limit,0
+it looks like you have some auto line break setting that does not match our conventions 120 char lines are ok,0
+that was a strange link conversion it starts on line 203,0
+This line does not do anything,0
+Does this empty line somehow contain secret information is it some side channel 429 what do these primes tell us,0
+This line makes 0 sense to me,0
+And the line you are commenting on does not make sense,0
+Can you change your commit message to match the usual Akka conventions,0
+Lift naming conventions are quite inconsistent so the association between or and is probably much weaker than with Option In any case the Lift community is a strict subset of the Scala community so or is an improvement over,1
+I see no difference for java and scala for these formatting conventions,1
+this formatting looks a bit surprising parenthesis structure I would suggest keeping all of createInstanceFor on the first line and start the next with recover,0
+this if else has somewhat misleading formatting,0
+of course you do not need to undo these formatting changes,0
+I would add some indentation of the whole config and fix formatting of next line,0
+use the logging formatting instead,0
+I think I messed that up Later on the reformatting did not do this,0
+wrong the changes are probably some auto formatting thing in IntelliJ,0
+automatic formatting perhaps,0
+I assumed so and I did not pay that much attention to formatting,0
+I could not find anything about reformatting MDC values so this will just print a mildly meaningless 10 digit number What we can do is to print the time of day in UTC side stepping the expensive calendar formatting issues This will usually be well correlated with the SLF4J timestamp because the delay between the generation of the Event and the call to log should not be that long,0
+True but I do not want to waste CPU formatting something that might not be used and then the user can not really reformat easily,0
+is this formatting looking good,0
+this is an automatic formatting by scalariform in eclipse only when there is,0
+I thought I had done that but some reformatting or automatic importing must have messed it up again Will fix,0
+LGTM apart from some formatting,0
+Added documentation and fixed formatting,0
+LGTM apart from the formatting,0
+Apart from formatting LGTM,0
+Could you revert this formatting change,0
+Nice formatting change Should switch to the FSMDocTest approach because that still leaks when tests fail,0
+this file should have worked without reformatting as far as I can see reformatting it is fine but want to be sure you did not reformat because the parser was upset about the original,0
+ouch I blame my scrapped Eclipse workspace for losing this piece of configuration,0
+we have those to be able to run tests directly inside Eclipse when the scalatests runner is working we will remove all of them,0
+yes it looks a lot more funny outside of Eclipse,0
+imports at top of file is normally something I just want the IDE to take care of and Eclipse does not do this kind of multi import but I have changed it for you,0
+Are you gonna blame Eclipse for this hideous indentation,0
+eclipse formatting due to the,0
+eclipse scalariform will reformat this line because of the,0
+looks magic and fragile and eclipse does not understand it but if it is not possible then just ignore my comment,0
+Can you reach Maven have a branch that ports Zipkin over to using Maven Would that help Its not fully functioning yet so itd take a bit more time to get it ready for release,0
+mental note fix grammar below,0
+Yeah Ive got a second patch that just puts a hardcoded check in IsStandard,1
+Is this LOCK really necessary,1
+Good idea Maybe make the 7 day window a command line flag,0
+Portefeuille isnt capitalised elsewhere,0
+some comments in the code would be appreciated,0
+Is this a patch for this one,0
+Couldnt this just as well be patched on the BitcoinQt side to avoid rebuilding boost If the problem is just the startup time then why does the version that doesnt care about startup time not work,0
+Could you explain what your patch does or changes in comparison to the legacy code,0
+I observed the same strange GUI freeze again under some special circumstances,0
+Might be a good idea to create a file with settings constants Perhaps separate files for network rule configuration and for node resource utilization configuration,1
+What happened here I thought I saw this patch as a pull request before,0
+I do a manual edit of the translation file with Qt Linguist so that no unfinished tags are present,0
+IMHO you should take a look at 2991 and merge that before merging this pullrequest as that would be easier for translators,0
+Its exactly the same in this case I have no preferenceif you have elifs you can only use if definedXXX as there is no elifdef,0
+That string causes an error when trying to translate it on Transifex I guess because of the code tag,0
+You could assert here,0
+Will this commit be available in the staging tree,0
+Very nice Can you add a comment above the static vars in checkpointscpp so we remember how to get them the next time we add a checkpoint,0
+Why two at the same indentation,0
+Is this a bugfix or new feature,0
+See as part of which accomplishes the same thing in a slightly more versatile way,0
+Some indentation issues here and below 4 spaces,0
+Could be but is that important here I see the referencepassing stuff as important in the case of computeintensive code and huge objects where a copy op is expensive critical for a lot of blockchain stuff not so in the wallet,1
+I was wondering about that and tested with gcc before putting in a goofy return notreached GCC doesnt complain,0
+Ill push a new commit to fix these and now Ive got Eclipse set to use spaces for tabs properly I hope,0
+As I said just a feeling and Im no native english speaking person,0
+There is also the operator to act like a logical OR operator joining together a number of conditions and requiring only one of them to be,0
+What am I doing I read the exact same document Will update to use the operator,0
+Not loving this If I get rid of the compile warnings then I get a dirty tree and I know sooner or later Ill accidentally commit,0
+sipa ACK to that suggestion,0
+Closing this issue as Im not sure its relevant if it is please reopen,0
+I recently took a look at Boost 150 which was released a few days ago it seems they took a different approach to fix this,0
+Yeah getting rid of the monkey patch is even better,0
+I dont see how it could nontrivially prolong the initial sync on low resource nodes Im not arguing that it doesnt but tell me why you believe it does,1
+As I understand it if the node receives the transaction it has to look up all inputs which in this case dont exist,1
+10 potential performance improvement during bootstrapping or loadblock is not enough to justify the testing effort to make sure a change doesnt break anything in my opinion,0
+ACK but needs rebase,0
+It seems like that wasnt being used previously,0
+TheBlueMatt It IS used when compiling BitcoinQt on Windows directly via the project file Even if this was not used by us it is beneficial to users trying to build from source as a clear indication for static Boost 149 libs,0
+The substract fee from sent amount button is a nice idea They talked little about it,0
+Nice ACK on the codeMay need testcases though there are currently no testcases for CDataStream with SERGETHASH at all,0
+Closing as resolved,0
+The problem is not a corrupted downloaded file thats easy In your case the database is corrupted despite several systems which try to prevent ever getting an inconsistent state on disk,0
+Didnt have time to test it properly so far sorry Ill close it for now and I guess if someone else encounters this same problem upgrading we will be able to reopen it,0
+I actually uncommented that line yesterday while testing something and I wasnt even aware we had a blockprint function until I saw it conveniently in the code I was looking at,0
+A dev is free to close this when you want to keep it At least such a pull can lead to think again over certain parts in the code and thats also positive IMHO,0
+Really I can be a fucking damn nitpicker but that indentation thing could have been fixed Im thinking about never doing anything coding style related in core if that is what you guys want then winwin,0
+Mind that normal users dont have a clue what Qt is If you want to give it a name its the Satoshi client,0
+ACK tested clean builds of both bitcoinqt and bitcoind individually with custom CXXFLAGS,0
+Guess I didnt realize there were 2 spaces there Im getting old,0
+Its just generally good to avoid changing a line that doesnt need to be,0
+Can you call response reply to match the Rep type and keep the parameters in the same order of log,0
+Just wondering what was the reasoning behind removing the pipelineFactory field,0
+That could be the cause of the timeout exceptions Im now seeing with Finagle,0
+code style space between colon when specifying a type,0
+You should edit your plugins instead this way you dont pollute the repo,1
+Opened pull request,0
+I would like to see benchmarks against the normal MySQL driver as part of this effort For performance memory usage and CPU usage,0
+Hey sgarg take a look at the recent changes to finagleredis mosesn recently added a bunch of set and list commands If you have additional commands to add please open a new pull request Thanks,0
+Alright good to know Im working on getting us upgraded to whats current so probably at least one of these will pan out Thanks for the help,0
+Doesnt seem related to this patch,0
+Thanks a lot for the pull request It looks good all in all but we could make it even betterI would recomend to check if the buffer has an array,0
+Ah yeah I think that would be better Ill update the patch,0
+Ive updated the patch according to my last comment Im happy to update more if need be,0
+This should be fixed,0
+Glad to see youre contributing to the finagle community However I think that it would make more sense to keep feature separate for now Our team is very small and we unfortunately cannot afford to maintain every pull request with big new features that we receive I think that making this a separate library that integrates well with finagle is the best way forward,0
+What confuses me about it being intermittent is that the manual HTTP request works every time,0
+ThanksYikes this is an ugly bit of Synchronized in Scala might consider a more explicit approach too,0
+I pulled this internally you will see your commit soon in this repo Thanks,0
+We didnt implement the thrift transport in finagle but I remember reading on the mailinglist someone willing to do first,0
+Could you add comments in a similar style to the other functions And could you also add some test cases in ClientSpecscala for the new commands,0
+why not Nil,0
+why do you need the empty check,0
+use camelCase naming convention forceExpire,0
+after that looks good please merge,0
+It would be more scala idiomatic to use the apply methodcodecHttpLike,0
+Im concerned that this code is too functional at such a low level I can imagine it being a hotspot Obviously we will see when we do performance testing but usually you want Clike code when doing operations like this one to avoid a lot of CPU and memory overhead,1
+Need an explicit charset I suggest that we require UTF8 on both sides,0
+When tuples arent natural use sequence the statements instead While correct it isnt obvious to the reader,0
+lets measure first cut later id like to focus on correctness and clarity first then performance later and of course to make sure that the codec isnt structured in a way that wouldnt allow us to squeeze all the performance we can out of it later,1
+Im not sure if we can assume that error codes and messages are in ASCII,0
+Constants should start with UpperCase this is actually not only a matter of style but the pattern matching does not bind uppercase names so it allows you to match against constants,0
+As suggested above better to enforce UTF8 both ways,0
+That makes sense I agree it would need more work to be more robust and safe But if you dont think it is worth having we can scrap it and let the user explicitly build the queries,0
+constants are Capitalized,0
+Do I understand correctly that this conflates NULL and empty string by always translating empty string to None If a legitimate empty string were returned would it result in None and thus be indistinguishable from NULL That would not be a good thing,0
+Blank string and SQL NULL should never be conflated,0
+My goal is to make sure that the tests are deterministic Without adding some predictability to the rng the test will fail randomly which can be a frustrating experience,0
+updated the code to make count an option and adapted the tests,0
+I would change the type of count to int and change the default value to 1,0
+consistent styling no whitespace between tokens,0
+youre going to have to back out the README changes before I can merge perhaps put your README text in READMEmd,0
+You have to use sbt to build finagle see the README at are used internally and are not compatible with the github repo,0
+Thank you Im pulling this in internally should show up here soon,0
+this is just a case of finagle being too verbose im landing a fix for this today or tomorrow,0
+zhanggl this pull request is now up to date with the rest of finagle tested and should work properly I hope its useful to you,0
+another thing that would help me with trying to reproduce this is approximate failure rate of requests latency of requests and request concurrency,0
+have changed to your method the last one would have probably failed with nonenglish locales,0
+yes theres only linux targets by now creating a new project should set the default paths and since its using makefiles its fairly easyjust updated it so it doesnt complain about so many errors in the latest version,0
+oh sorry didnt saw it had to fix it because the core wasnt compiling for me this morning,0
+hi what was the reason why you reverted the fix in ce9b22e038ca16b581a16722436327bef206cbdf with this commit,0
+cool thanks i also have a pixelbuffer implementation but my suggestion would be to rewrite all three implementations into a general purpose,1
+s1monw Any idea when 0 90 4 will be released Thanks,0
+CORRECTION Please accept my apologies and disregard my previous comment I can confirm that issue has been fixed The problem was me indexing under a different index type than the one defined in the mapping Again thanks so much for the great support,0
+I would recommend creating a Logger service factory,1
+Thanks for clarifying,0
+You sure Http request parameter parsed is ignoreConflicts and defaults to true,0
+FWIW this fix allowed me to import my data and I was able to search on the problematic fields without seeing any unexpected behavior during my searches so far,0
+superseded by 2129,0
+Its not a standard dependency among classes,1
+Users could then call on that to attach additional writers or to simply get the logger instance,1
+I have all we are going to have all the data change and drive in the data,0
+not sure exactly how this has evolved but originally the idea was that with ThreadSpanningOp when you use it you use it only and it wasn t designed to interoperate with the other Lock classes and stuff thus it didn t set threadstate for example it is fine if it is different but does this now imply i can use ThreadSpanningOp interoperably with all the other Lock classes i imagine it won t play nicely with them will read more later,1
+pushed a fix for the null pointer exception it works well now Note because of the near real time search you will get a NOT FOUND response when you run it it will get after 1 second,0
+Well an abstract factory could work too of course Slower but work too,1
+I think I know what the problem is your segment might have no docs in that field I will try to write a test and come up with a patch,0
+s1monw What s your take on this Do positions on numbers make sense,0
+Can you also check the logs of the nodes and see if there was any error happening before you started to get this failures,0
+pierrre OpenJDK 6 is available from the main ubuntu repository packages ubuntu com search suite default section all arch any searchon names keywords openjdk 6 jdk I have been using OpenJDK 7 and Oracle JDK 7 with ES for a few months now never had this issue,0
+OK and sha1 links deployed,0
+martijnvg That seems reasonable Done,0
+docs updated doing pull request,0
+I ll make those changes on other places as well but doing some perf tests over large number of shards shows hotspots when using iterator the foreach statement,0
+I suspect a small bug in our upgrade process when replacing a deb with a new one but need to investigate first,0
+I have my issue is that as written now the only way to use this class is to provide a factory for it you cannot simply add it as an invokable to the SM configuration,1
+closing this I think it was a misconfiguration In any case the zen discovery is much simpler,0
+Potentially the same issue github com elasticsearch elasticsearch issues 2531 edited to point to correct bug id,0
+Makes sense to me if the size parameter is all it takes to return the first results of the match all query then maybe MYINDEX search is enough and makes a nice default endpoint,0
+pushed to 0 90 master,0
+I noticed it was still working but I was thinking it should handle this situation a bit more gracefully and not log a stack trace Either way it sounds like this will go away in the next version when snappy is removed,0
+I ll take a look again soon,0
+Why make this class service locator aware If it is to have a factory in the ServiceManager why not simply inject the response object instead of pulling it from the SM,1
+Thanks for the quick feedback I wasn t setting the parent field on the DeleteRequestBuilder,1
+Sounds good closing,0
+I d be interested in doing this for the Perl API too,1
+fixed by commit 11bf7a8b1a7ec88e4d38ee69c8b5c577001fb68d,0
+Thanks will do next timeSorry a bit rush,0
+Allow bin plugin to install plugins from the local filesystem custom url closed by 26c5f6c48241fddfc8e50f46b27d7aaf62aa3708,0
+See also 1819,0
+mal thanks This is really interesting It looks like you are hitting 2609 except it was supposed to be fixed in 0 20 5,0
+we should support the preference and parent flags by using providing a base class in the API,1
+Create mapping now will automatically create the indices by default see 12,0
+so thinking about it a bit more we don t really support different cases in other places so maybe it makes sense to stay consistent instead of just supporting it here,0
+patch updated accordingly,0
+Thanks for opening this do you feel like attaching a pullrequest I d be happy to help you sketching out the functionality here,0
+Yea the idea is to not having to repeat it for each script since the typical use case is to use similar scripts with same parameters based on different filters,0
+Hi abelldh I m not following your description of the problem Could you provide more information as to what you are doing and what incorrect results you are seeing thanks,0
+1 it would be super useful to have this feature for distributed search,0
+Maybe add a h option no need to document it in the displayHelp method as this is known from many unix commands,0
+I would remove this here as the form element manager should be configured correctly so it has the factory already or not,1
+Added a more verbose message to the illegal argument exception in case the date format cannot be parsed the format is now put into the message,0
+This sort works correctly if all index type combinations have num mapped as integer,0
+Yea Ec2Discovery is the place to put this method,1
+We are in the process of pulling some of this duplicate code to the upper layers of hierarchy see AbstractSharedClusterTest for example So I didn t want to interfere with the process by creating non compatible abstraction layer on the test level,1
+pushed here is the hash cabbf7805b4fdc9342970e4e4b9f873436c9615c,0
+gsf cool thanks Will push an enhancement so it will warn in this case that multicast discovery is disable but still startup,0
+What about the InputFilter Factory use InputFilterManager to construct InputFilters,1
+closing this pull request Will create a clean one with additional support for fedora and opensuse,0
+Yes I was expecting the term which is stored in the index I misunderstood the token for term in the analyze results As an IP is stored as integer I had expected to see this integer,0
+I can give it a try it can be interesting experiment,0
+Ah my bad I do realize now that my production single node is 0 18 7 I was testing clustering but using 0 19 Sorry for the confusion,0
+kimchy So when you build ES distribution is it fine for you to add Pes release in your mvn command line What is the mvn command you use to build distribution,0
+Sorry for the duplicate ticket I m pulling back the mappings now and just testing to see if the item exists in each index Cheers,0
+pushed a fix can you test it,0
+Great thanks a lot,0
+take that back turns out health status checks are now available i was able to fix by making a request cluster health MYINDEXNAME wait for status yellow,0
+Thanks for fixing that,0
+Just a naive question Why do we need to support many different formats for naming options I thought that this kind of test was only here because of deprecated naming Did I miss something here,0
+If some of you are interested in the way it is done in Solr I described it in a blog post fulmicoton com posts grouping in solr,0
+i can use this hot feature in my client great,0
+I think First would be a bad default for this function score it made sense when we did it in the custom filters score I think Multiply would make more sense,0
+why it class is final I can not add toString and use this class as base,1
+Forgot to reply wrt 0 90 2 Actually even on 0 90 0 I could no longer reproduce the exception from the facet query The query now works without such exception even though data are still mixed with string and float values I will keep investigating and provide more feedbacks if possible Thanks Wei,0
+is it possible to create an InputFilter for file upload using InputFactory,1
+For what it s worth the multiple index single shard approach is working for us Our application has a new index per week of data anyway so it s not actually too painful for our current usage,0
+I thought about this a little more Would it be possible to add a new method to GetField such as isMultiValued to return whether or not the field is mapped as having multiple values This would be similar to LongValues DoubleValues BytesValues etc This would be a suitable compromise for both consistency and general usage,1
+From what I understand it was a glitch in amazon failing on one of the APIs can you give it another go,0
+That is what I get for not searching before filing an issue,0
+Suppressing ETags on a per index or per type basis is another interesting thing yes This depends on the REST action This needs some work in the RestUtils I guess And I have to find out if ETag cacheable setting via cluster update API works,1
+Yea it was intentional just trying to make the reproduce script as small as possible Thanks for the fix,0
+Adrian we are trying to find a few more ES engineers to work on the metrics team so that hopefully we can begin to tackle some of these feature improvements ourselves and contribute back as more than just users That said I ll ping a few people and see what their thoughts are on this issue,0
+Both are certainly better that IOException I d vote for IllegalArgumentException Should I use ElasticSearchIllegalArgumentException or are these somehow reserved for real es stuff,0
+Are you still having these problems with current versions of the debian package If so can you provide more information If not please close this issue Thanks,0
+this is above my head is 4 a valid timestamp or not It could be relative to 01 01 1970 in millis,0
+Here you go gist github com polyfractal 4997040Just realized that the C1 client node was not configured in Ansible so I didn t collect nodes local stats for that node do you want me to redo it and collect stats from that node as well,0
+Can you gist the full stack trace of the failure that you get,0
+synhershko Rather move the timeout conversation to issue 3129,0
+Just committed a fix I hope for the snapshot delete index thingy,0
+vhyza thanks for verifying I will pull this in soon,0
+And would it be allowed to have two indices with the same alias Index A and B both having alias C,0
+I think you should must not add participants as the pattern but simply use the class instead,1
+Would love to see this too,0
+kimchy Agreed I have to investigate with extra test code and variations of JVM parameters Maybe Mac OS X JVM specific,0
+ok rebased into single commit and force pushed Hope this is what you meant,0
+The execute method is not abstract and so the Command class is not abstract either because you can use this class,0
+I ll push this change since its correct but would like to understand what you are trying to solve specifically just in case I missed something,0
+It s backward compatible no breaking I think,0
+I checked ElasticSearch 0 19 11 and still see this issue Any thoughts,0
+Cam you squash the commits into a single one simpler to apply,0
+Closing this issue then Not an elasticsearch issue Still important to keep in mind that running security hardening tools might be an issue in order to get elasticsearch up and running Thanks a lot for your patience and ongoing information delivery,0
+The same thing for v0 19 6,0
+What s the added value of having such a json response over the current 200 status,0
+All right Thank you again for this I m testing it right now,0
+vbichkovsky it should work can you provide an example,0
+pecke01 any reason why you reopend it,0
+Hey How about creating an external client because this class is not really meant to be used directly anyway,1
+In more thing I discovered curl XGET localhost 9200 cluster settings Returns the following persistent transient cluster blocks read only false But I would expect persistent transient cluster blocks read only false Is it somehow possible that the type boolean instead of a string is returned,0
+looks good we currently fixed using a default boost 1 0 for the matchall queries and will remove when updating to next version,0
+I believe this is a bug in Lucene I need to find the bug and once I do will post it here There is another issue in ES issues that talks about it and references the Lucene bug,0
+gromgull is it the same stacktrace as above,0
+Ubuntu something and initialized a node from code using the Java lib,0
+Implemented and will be available in upcoming 0 20 using the ignore indices parameter,0
+Added two commits change wildcard parameter name to regex and integration test,0
+1Any suggestion how to solve it until its not implemented,0
+rmoriz thanks,0
+Hey Can t find Regex Query Filter in 0 20 1 Do you have any plans regarding this Best regards,0
+1 At the moment this one works for me github com geronime es reindex Implemented in Ruby it has nice progress status with ETA and Ctrl C,0
+Cool thanks,0
+I wrote a synonym token filter that reloads the synonyms file at given intervals from disk that you can use as a temporary solution until we can use the resource watcher in general github com lindstromhenrik elasticsearch analysis file watcher synonym,0
+Lucene 3 6 is ready,0
+No the arithmetic failure only shows when asking from node stats for all the instances When I used the local variant none of the nodes raised an exception but the faulty node returned invalid values for the filter caches,0
+140 char per line convention I personally don t mind much but that is what we agreed,0
+1 encountered it too,0
+referenced the wrong issue reopening sorry,0
+See issues apache org jira browse LUCENE 5170,0
+44 additions and 70 deletions I like it 1,0
+What is the best way to retrieve it know The info for aliases is in cluster state but is there a better way,1
+You should use this method to instantiate the Configuration in the load method,1
+worked on it a bit more and opened 1177 this should solve it you can verify on master or 0 17 branch if you want,0
+Closing I think we fixed all the places,0
+whats wrong with that its intentional,0
+The next version 0 20 will have a better log message in this case so it will be simpler to figure this out,0
+Did you mean to spell that monitory jvm enable last gc or should it be monitor jvm enable last gc,0
+chrismale didn t think about that for me match does not mean not being scored specifically also the fact that its a query Open for better names,0
+Just to complete the picture it works well for day level interval just not minute level and probably hour as well,0
+Shouldn t there a more generic class to enable or disable this,1
+for scheduling settings we use interval in all other places maybe we can do it here as well so it will be cluster info update interval,0
+The following patch closes the issue github com stephane bastian elasticsearch commit 31f5133fadcd195e824bb1cd07807f7cb298f879,0
+Please could you provide the docs for the usage of terms so that I can add it to ElasticSearch pmthanksclint,0
+Could you post somewhere all log files since cluster restart from all nodes and your configuration You can send me a link via IRC or email if you don t want to post them here,0
+kroepke Thanks for the numbers That is still quite a good performance considering it has to scan all the matching documents and aggregate the counts,0
+It happens because we change a bit the logic in our settings behavior to have empty strings represent no value set for other reasons We can fix it in the pattern replace one easily,0
+davrock no its a 0 90 feature only,0
+That might be a duplicate of 2808,0
+When is the approximate anticipated release of 0 90 4 we plan on a release early next week,0
+Too much magic can be bad Decision made to specify geo points manually,0
+I just wrote a Hunspell plugin,0
+Great What about second functionality strong and weak filters,0
+See 2728,0
+Shouldn t we also use this method in the mapmanager constructor,1
+Confirming that we see this issue even with 0 90 2 Are there any known work arounds,0
+Also would be interseting to see an export of all env vars,0
+Ok guys look like I was doing my tests wrong and this issue convinced me there were an issue As my gist show it there is no bug in ES about this Maybe we can close this as the issue is 1 yo,0
+I think we shouldn t assume that the payloads are UTF 8 strings Maybe it should rather be base64 encoded,0
+You are right amazing it worked at all Closing the issue,0
+Thanks It will be helpful for others So I close the issue,0
+Sorry for the noise I m wrestling with git squashing and finally did remove the branch A cleaned version is here github,0
+I finally had time to fix this issue today day after a holiday is slow around here and you already fixed it,0
+The fix is easy but will the current tests simulate the serialization deserialization of the index settings Most tests skip this step,0
+Heya thanks for the effort We are deep into the lucene 4 upgrade once its done we are going to go over this pull request,0
+This does not really help can you recreate it in a simple test case,0
+lucabelluccini can you show me all the commands including the wget to download the archive,0
+I think there is no reason that template has to be lowercase I will jsut fix the message to say it relates to name,0
+Okay is that by design or is there a reason why that you are using this class,1
+I see thank you for the clarification,0
+Same issue here any fix or workaround,0
+don t think that s the safest approach Can you find a way to a make a factory method tha generates new instances with the value you want but once generated they are constant,1
+Thanks Robert Changes pushed and released a new version of the elasticsearch analysis icu plugin,0
+What do you mean volatile variable can t be written to which version does it fail on,0
+Thanks for the update,0
+I answered it on the mailing list closing this issue If there is a problem we can open a specific one,0
+single line instead of 2 lines,0
+We can use a UserProvider be we will have to add another User class which will support setPassword I think it s useless to add an overhead here UserProvider loadUserByUsername is not possible due to ldap limitation Thats why IMHO it s easier to no use this method,1
+Right just pushed a fix,0
+After testing this in the 0 20 1 release it works as expected,0
+This looks ready Can you squash your commits and add Closes 3202 at the end of the commit message,0
+kimchy I think you assume everyone uses some kind of IDE like Eclipse or InteliJ There are still Emacs vi etc users out there If there is a problem with setting up an on line javadoc it would be nice to have at least a maven target to generate it locally,0
+Thanks Simon Sorry about the mix up regarding whether or not this was backwards incompatible,0
+Our setup does automatic mapping updates so from my perspective all I did was update from 0 90 1 to 0 90 3,0
+I started seeing exceptions I ll be more careful before filing issues in the future,0
+Closed by github com elasticsearch elasticsearch commit 91de48d2d396ca0868b7d0f6a6e8b2c5265793b9,0
+Are you sure this is the good fix We are already in a zen section and we added a ping section Correct me if I m wrong,0
+Fix confirmed And thanks for the note about the timeout,0
+Would you support having an alias for ObjectId ala asdsdsadsa,0
+Hi Guilhem I see that you referenced a SERVER ticket which is great Have you also signed our contributor s agreement There s a link in CONTRIBUTING rst in the root of the repository Also how much does this overlap with other tickets such as jira mongodb org browse SERVER 10190,0
+Create new pull request 251,0
+For me it works perfectAnd it fixed my initial issue jira mongodb org browse SERVER 5845,0
+Created and linked a SERVER ticket so we can start tracking this,0
+Hi IanWhalen agreement is signed,0
+primary isn t helpful here since todo size 1 implies the collection must be sharded and have a manager,0
+Is it enough and normal,0
+My suggestion would be to change move method to use move uploaded file and then create a new class just for test environment and override the move method to use rename instead of move uploaded file keeping all other lines in method the same,1
+The math is wrong here If delayEnd delayBegin 1 we get rand 1 which will always be zero I think we want 1 delayEnd delayBegin,0
+xmcc Can you make the changes that Eric suggested I think these are the only obstacles we are aware of to getting your change included,0
+Why I don t like the idea to use abstract here Abstract is ment to define an class that implements some functionality but needs more behaviour added via inheritance to function properly If you want to prevent the possibility to instantiate the class you should protect the constructor but this is not the case I don t want to prevent evolution of this component,1
+To clarify a simple jstest like those found in the jstests directory would suffice,0
+Also I don t think this works with multiple machines or discover,0
+Hi Azat can you please sign the Contributor Agreement,0
+this make it much clear,0
+Hi Michael Thanks for contributing to MongoDB The fellow who needs to review your pull request Mathias is out of the office this week but I will make sure he sees this as soon as possible,0
+Yes I think that ActionMailer should not depend on ActionView,1
+milkie helped out a ton with this we worked on it during HackNY this weekend,0
+I just changed the contents of this pull request slightly Somehow managed to fudge up a one line fix,0
+I m running into this locally Can this be applied to v2 4,0
+Call this QLockTimingWrapper class instead,0
+We should think about storing a reference to search field so we can move methods like this to AbstractChosen,1
+Yes thanks I forgot that hasDollar is a pointer,0
+Hi azat in order to consider this we need you to open up a ticket,0
+New pull request is 474,0
+Where are you thinking of putting it instead of an alternate ModuleManager factory,1
+Hello Thanks for looking at my pull request Actually I don t want to complete the Contributor Agreement form So I suggest you reject this request and fix yourself it is a small patch,0
+It sounds like either method will work right now but there are some reasons to avoid using boost shared ptr,0
+erh I haven t tried multiple machine yet I ll get it a try and see what parts are left and yes a test case would be good to have Thanks for your comments,0
+Once you ve rebased you can use our linter to verify your code style python buildscripts lint py file Also note that tools files cpp was moved to src mongo tools files cpp some time ago,0
+processFile and processFifo share too much copy paste code You ought to be able to write private methods openFifoFile and openRegularFile and then have a processFile function that takes an open and ready to read FILE object no,1
+Thanks again for the pull request We fixed this with a very similar approach You can view more details on the fix in JIRA jira mongodb org browse SERVER 6008,0
+It s a bit of a microoptimization since there s nobody to spuriously wake up when X n is 0 but it would not be incorrect semantically,0
+It have been obsolute So I ll post new pull request,0
+leave this assert in and change e n to count,0
+Couldn t you always use the controller request That request object should be passed into the view as well,1
+Replaced by github com mongodb mongo pull 114,0
+i agree if you are sure notify one is fast with no waiters,0
+nitpick style long line 100 chars max,0
+You should test the length of some real fields as well such as the text field in the articles,0
+Hi IanWhalen done jira mongodb org browse SERVER 7750,0
+It would be nice for the history to contain a literal transcription of what the user typed,0
+However that might prove to be a behavior change in some other cases that I haven t considered,0
+Hey I signed the agreement Now you can merge the changes,0
+It might make sense to keep a ControllerLoaderFactory in place that simply extends the ControllerManagerFactory We would not register the factory but that way if somebody was extending it it would continue to work,1
+I will reissue all my pull requests rebased to try to prevent this piling on effect,0
+Closing this old pull request as the SERVER ticket was resolved,0
+Thanks we re in non critical code freeze for 2 3 1 right now but I ll merge this in when the freeze is lifted,0
+I can only see this in master no other branches,0
+I just re submitted the agreement,0
+Hi Alexis I tested this and see that the default awk on redhat 5 7 and 6 2 don t accept s as a whitespace character It looks good to me otherwise though What do you think about using blank instead,0
+Hi Michael Thank you for the pull request I see that you have signed the contributor s agreement and there is already a SERVER ticket I will get someone to review your changes as soon as possible,0
+I think this pull request is now ready to be merged,0
+redmeadowman thanks for opening up this pull request Before we can take a look to consider merging this we ll need you to sign the contributor agreement at www 10gen com contributor,0
+it should all be opt in some facade to have previous behavior I guess,1
+Closing as duplicate of SERVER 4161 These tests were merged,0
+Ah thanks for the info,0
+sure UnitTest is something that runs at every server startup so they must very light and fast real tests should go in dbtests test binary or jstests if applicable running tests v good idea see smoke page on wiki,0
+Thanks IanWhalen I ve signed the Contributor Agreement,0
+Why is this not merged And or code reviewed I ld love to see this integrated,0
+stoll doesn t exist in Visual Studio 2008 I m installing the windows 7 SDK to see if that will rectify it but perhaps even being dirty and calling atol would be better than causing build problems,0
+Can you switch the C style casts to C style Just for the lines you modified you can leave the others,0
+ah i see thank you,0
+I have updated the JIRA ticket with the updated unclean patch with which the smoketest passes on Ubuntu ARMv7,0
+Yeah either that or fix the message,0
+Hi I ve added a test case for this issue So is it possible to merge this fix,0
+Note that dump cpp has the same code see SERVER 1833If we change it in export cpp we should make the same change in dump cpp,0
+barretod you can follow the status of this particular feature in our official feature tracking system,0
+Any intention of merging this It d be a super handy feature for dealing with timeStart timeEnd type problems upserting aggregates,1
+Why did you remove these assertions Since they seem to work for everyone else it s safer to first assume there s something wrong on your setup and that we should figure out what that is,1
+syntion yeah you right I haven t tried to build it with use sasl client and ssl and decided to not remove these files in case someone added them on purpose,0
+I ve merged your commit into this pull request please take a look It seems working even better Thank you,0
+Sorry about that The new things are just so shiny,0
+Couple of notes we re not going to change the type from number to string names should be consistent between dbstats collstats keeping commit log clean is important,0
+No plans to merge the auth part atleast to v2 0,0
+I will make a new pull request then,0
+102 is a bit better,0
+Ping Tim I still need these issues fixed before we can proceed,0
+Weird Other tests call it and it worked on my machine I ll look into it,0
+Test doesnt pass because documentEq isnt defined,0
+Reply to this email directly or view it on GitHub github,0
+Thanks for your comment I chose trim as it is used in e redis but renaming it is simple,0
+Ok I understand Thanks for the feedback,0
+So the solution for my problem would be to create a facade for the all uses of Process,1
+It isnt LogMessageFatal calls abort which should stop the server,0
+Did you see different behavior in practice,0
+Verify stops the server if the condition is false and prints out a stack trace other info,0
+miketheman I remember that I comment here,0
+In general I would prefer patches on top of current master it is hard to read diffs,0
+Not sure how easy githb makes this,0
+Is there a reason you put slaveOk in the middle rather than the end so we can preserve backwards compatibility,1
+I would still like to do it just not very high on my to do list anymore,0
+If you prefer I can make changes on my end and update the pull request just tell me,0
+Sorry for the delay getting back to you Two minor nits then I would be happy to merge,0
+Have you completed the contributor agreement,0
+You should likely define a factory for the DbSelect adapter instead Having conditional logic based on type is a recipe for problems,1
+Why did you add the copy and assignment ops I think those are the same as the automatically generated ones,0
+see abovecould make LOG if performance was the concern,0
+added this commit to avoid using eval,0
+I couldnt find any references for updating If thats included in what you have done some portion of that is still relevant after renaming,0
+I would also like to see this method not get overriden in the future,1
+Could that syncing process be updated to ensure that the changes made here are incorporated,0
+I will try to have a look at it,0
+You might lose files because fsync on a file doesnt quarantine that the file is visible in directory,0
+you are right was only backported for mongostat not mongotop,0
+Closing for now as discussed via email,0
+Closing so that I can create three separate pull requests,0
+We can build a facade for askDocComment,1
+Also we should put in a link to the new documentation site and a mention of the mongo users google group,0
+I agree Just added to remove the non determinism,0
+That would work,0
+Eliot I decided that your way would be better in any case see previous commit,0
+Merged in c0e30cdd5623,0
+Writing tests to cover all export options imo should be another issue,0
+The pull request of RexMorgan is clean and simple it cannot introduce any bug and could be very usefull,0
+Please merge it soon,0
+Dont think this is something we want to do,0
+Too high a risk of having bizarre errors,0
+Thanks Justin I see the updated contributors agreement Looks good now,0
+When will this get integrated Any feedback,0
+probably should have clarified the commit message first not the end of the world merged,0
+Don t you think 454 can be a better way for upstart I m really open for suggestions,0
+You are correct sir,0
+I m going to take another look at this,0
+Damn Im glad Im not as stupid as the guy who wrote this,0
+It just wont create the file,0
+I am using the cleaner approach in peregrine and it is working well the only caveat is using a ByteBuffer that has been closed will cause the VM to segfault Putting a facade in front of it can prevent this from happening though if you first check for an isClosed state,1
+This also gets called if the size is not greater than 0,0
+Merged in 23f8257fa Thank you for contributing to MongoDB Xiuming,0
+hiis it works well,0
+Hi Abhijit can you fix the indent and tab issues noted above,0
+Hi I already did it yesterday,0
+Drew is getting ahead of himself cbegin and cend are C 11 names begin and end are fine,0
+Took me a bit but I got the hang of squashing things That change should address all the comments,0
+forget it bsonobj getField whatever numberDouble did the trick got another mistake in code just ignore my input,0
+I have signed it,0
+what if somebody substitutes an alternate DbSelect implementation that isnt compatible with this Alternately modify the DbSelect adapter,0
+Hi azat could you open a ticket in the MongoDB JIRA with a link to this pull request Thanks,0
+please merge,0
+should be return LOG INFO,0
+This is released in 20,0
+This log message made my entire evening during which I was harshly awoken and summoned to fix things,0
+You are a hero nay a champion I salute you,0
+what happened here,0
+We have been waiting for a long time for something like this for solving SERVER 991,0
+What release version can we expect on this one,0
+Thanks guys Looks great,0
+DiskLoc is no bigger than a pointer so probably fine to pass by value,0
+In fact i once had a bug in the btree code due to an alias of a DiskLoc s value being modified during recursion,0
+Hi I have created a JIRA for this,0
+I had changed it several times and never fixed yet Currently 5 or 30 seconds is fitting on our system,0
+Mind if I leave the SERVER ticket open and assigned to you but close this pull request Feel free to reopen when you have something for us to review,0
+This is probably asking to move the moon but is it possible to move away from scons as to be able to build this without mods from master,0
+cxmcc I see your updated contributors agreement it looks good Thanks,0
+first commit on the server yeah satisfied,0
+This is the wrong place to wire it Since it has to do with dispatch logic it should not be in the ViewManager,1
+Hi miketheman Ok I will update my patch during upcoming week and afterwards I will open a new ticket in JIRA Thanks for your time Tomas,0
+Well original CHECK is not fatal Do you really think this should be changed And I m not familiar with MongoDB s codebase what does verify do,0
+At present you can use this class as a CB class that only expresses externally as the Bukkit interface ChunkSnapshot,1
+You have stopped adding the edit command to the shell history,0
+Missing a space between if expression,0
+ok but the arabic is also simple even it is appearing complex arabic language accepts the stemming and mongodb is fully unicode so i dont see why it was not included,0
+Wow I really need these cool patches,0
+Yeah I can do that some time later today or tomorrow,0
+Hi Alexis Please see my comment about the contributor agreement,0
+Thank you for contributing,0
+We could drop the R since it wouldnt be necessary when we actually create the dirs Or simply check if the directory exists before calling mkdir chown,0
+Thank you At first glance these look like good changes We will do some further review and testing,0
+I created a mongodb JIRA issue for the projection support in bsondump so we will see what happens,0
+But as a generic container one can make your own class that implements the ChunkSnapshot interface just as easily the value IMHO is in being able to tweak or manipulate the snapshot without having to copy all the data into another container,1
+I just did,0
+I tested releaseConnectionsAfterResponse option and it looks good And you d better add a setParameter option to set it dynamically,0
+Azat The feature request needs to be fully considered and fit into the overall dev cycle before that s necessary,0
+Sorry ronelliott please clarify your request What would you like,0
+Looks like the finishCode call was removed I have added it and verified that multiline editing works as intended Apologies for not catching this earlier,0
+Thanks for the feedback I updated the request and signed the contributor agreement,0
+Hi Matt Thank you for reply I have signed the agreement,0
+right will take it out,0
+erh I think it would be better to have a look at the test cases I have written The commit message isn t very good I ll certainly agree to that,0
+Hi Matt Yes I signed it and confirmed Thanks for looking at this so soon,0
+If delayEnd delayBegin this should either be an error or should be compressed into delay,0
+Bah this was a one line change I m not sure why it pulls in 53 other changes,0
+andy10gen When you get a chance this will re introduce multi line editing I had previously removed the code and not noticed it in the diff,0
+hlobil my apologies for closing this without further details this particular pull request was closed while the submitter reworks some of it and then resubmits,0
+No code changes have been made,0
+Okay but what is the proper way of concatenating an int to a string in the mongo codebase,0
+I would highly recommend squashing these commits when you do the merge I didnt do it myself because I wasnt sure how GitHub review system would handle it since we have comments associated with the specific commits,0
+that is an accident will remove,0
+andy pulled it into 2 0 5 today,0
+i will write a comment to mention that this is intentional,0
+Is this pull request going to be reissued and added in a future release,0
+Subsumed by another fix,0
+Contributor Agreement signed change pulled into master,0
+Add SERVER 7800 to commit message 2bfd087b2a7a095279ad75bc90d3722edd55d126,0
+However I think the concept of const iterator is sufficiently well known in C that you could omit this comment,0
+It is more work to determine which collection to lock and this line is hit rarely if at all,0
+I have an alternate patch that leaves the current implementation for all platforms but Linux if there is opposition to using the monotonic time syscalls,0
+Go for it,0
+Looks like you need to install pymongo the python mongodb driver,0
+Instructions on how to do that are available here,0
+Small typo here unauthenteicated unauthenticated,0
+obj name Double is the canonical method,0
+thanks would work either way but i have a slight preference to by value,0
+I will reissue all my pull requests rebased to try to prevent this piling on effect,0
+Thanks Indeed the shim was needed Sorry for not paying close attention,0
+Hi Abhijit This looks better than than 425 but I see some style issues Tabs for indentation Misaligned indent perhaps due to above,0
+Please fix per our kernel style guide,0
+You can make it easy to see these in git as follows,0
+Again default to None,0
+Would this feature not also be useful as well in mongodump,0
+Hi Does this work without numactl installed,0
+iI means with that specific word it has several spaces which I imagine will break stuff It should probably have been on a new line,0
+erh Sorry I meant that I have only relaxed it for trim aka slice which by my definition states that it will always be evaluated after any other modifier So it is backwards compatible,0
+Sorry about that I was in a rush to get this done as part of a presentation and must have missed the agreement instructions Signed and confirmed,0
+okay will rebranch it again and put the link,0
+see coding styleif else,0
+I concur So for now I will leave this as is,0
+The code as written is correct I think your new code will cause a crash,0
+Could you please fix the whitespace error on line 233 of string data test cpp,0
+erh What do you think of the redis implementation of TTL redis io commands expire,0
+Hi MichaelBrenden thanks for opening up this pull request Before we can take a look to consider merging,0
+thanks just pushed an attempted fix,0
+Thanks I will submit a fix to master for this shortly,0
+should line up with the first from above,0
+Right I just used the same types of casts as were there before Nested reinterpreted casts statements will look quite weird,0
+should we enable this now,0
+strncpy is problematic because it is easy to mess up and not 0 terminate the destination strcpy,0
+it makes sure the src length is less than the size of the destination buffer,0
+what s timeout value you set in your system,0
+andy10gen original behaviour was to call abort if check failed,0
+Would be good to write a test before we merge this in,0
+Okay I moved the logic to the if statement,0
+Does this have any benefit to the shell users,0
+why does this test need to load this it should not be calling this method,0
+Hi Thanks for pointing this out We re determining the best course of action and will address this issue in an upcoming,0
+I see Can you make a feature request and link this pull request,0
+40708e54a41f833933d748383d563cf7c9092744 applies your commit sorry for the wait Thank you for contributing,0
+regex patterns must have BSON regex or string type,0
+There is already a fix in mongodb repository,0
+this pull request can be closed,0
+IanWhalen I noticed this was lingering so I rebased it atop master I had hoped it was trivial enough to merge through GitHub,0
+should I open a codereview issue on it,0
+Another 1 on this Very helpful Thanks,0
+ubuntu 10 04 users can use init version without any problem,0
+If a change solve many problems for 99 of users and change behavior for 1 of them because there is a workaround I think this is a saving change,0
+Put the space in please,0
+Anything holding this back,0
+OK Matt Done,0
+No your reasoning makes sense I don t recall if the shell supports CTRL R for searching the history but if it ever does users would be surprised not to be able to search for their quit command,0
+Ability to remove stale entries in fs files would be very useful,0
+Hi Benedikt Two months have passed since our last discussion so I am closing this pull request due to inactivity,0
+If you would like to resume work on this please sign the contributor agreement,0
+tests look reasonable to me but hard to tell for sure w o running them since they seem more descriptive than prescriptive,0
+I guess it doesn t make sense to print buf if it got truncated So that part seems fine to me,0
+what s wrong with assert it works doesnt it,0
+What we want to change is primarily Update all maps in the same updater on the same level instead of the wicked design where MapInstanced inherits from Battleground classes with BattlegroundMap and update Battlegrounds in the same fashion as other,1
+Review it to know it it was sitting on tracker for weeks,0
+Fix a server crash and small issue related to casting Blink,0
+Awesome Shauren keep up the good work,0
+now I think that disbanding shouldnt be in TeleportToBGEntryPoint anyway it just doesnt belong there should be redesigned I guess,1
+It s not working so stop saying that,0
+this shouldnt be here got some work to move it to the right place,0
+Target param here is wrong fix incoming,0
+Possible to have the list of tweaks Need to try compilation under OS X,0
+Applying the SRP should be done in other classes of the code as well However I recommend to do a two step approach next time 1 Factor out the code but still provide the deprecated functions which simply delegate to the new functions Mark the deprecated functions as such 2 After some grace period remove the deprecated functions This would give others the time to adapt to the new design architecture,1
+you have to multiply the currency amount 100,0
+This is not fixing anything it s just a cleanup and a favor for devs,0
+achiavelli fix you commit trouble eye,0
+Attach crashlog pls I compile under x64 Ubuntu,0
+I also have doubts about this not only creatures can be vehicles players can too In fact IsVehicle is member of Unit class,0
+does it fix these short client freezes,0
+You are right expire bonus fixed,0
+Why capital version of x,0
+great work,0
+Yes and it froze my character,0
+Not the client only the character,0
+He stopped attacking and my greater healing aura 1908 stop working but I still got attacked,0
+Patch updated minor code style cleanup,0
+Using a PlayerScripts here would be better than this class,1
+hmm I have issue in my server when server crashes or players net or client game crashes,0
+Hm I just copied and pasted it and then tested ingame and all worked fine Maybe just an display formatting mistake,0
+mhm works for all ranks Black Ice,0
+why convert you not in creature text,0
+avalable available think,0
+It will make no difference,0
+indeed you are right,0
+is the newest rev still unstable,0
+This dosent fix anything same issue remain,0
+No need a git rebase i would be fine,0
+i believe SetHitDamage doesnt work in SpellEffectFn you should use it in OnHit class,1
+Could not find the file in MaNGOS s sourcetree Aokromes pointed it out,0
+will be fixed tomorrow,0
+read also patch info,0
+i have to leave so ill fix that later,0
+I wanna be like A Methaphysical Drama spells always are like a new world to discover for me,0
+Just wondering why you call it attempt didnt you test it yourself,0
+You are assuming that AHBot will use a Player account even if it is generated in runtime,0
+That wont happen not at least by my hand,0
+I think we could just make the counters members of the class and construct a BSONObj on the fly when getObj is called rather than keeping the object around,1
+Stupid question this does nothing about the interrupt visual that mobs that channel possess when interrupted correct,0
+diavolb your comment is useless without crashlog,0
+Forms again began to freez druids shadow priest sorry my bad english,0
+wtf form is freezing fix please,0
+No luck some freezes remains,0
+Yeah also moved BattlefieldHandler to the place it belongs Forgot to mention it,1
+Only implementation of the interface needs to be changed to accomodate for those differences,1
+This commit is wrong unless you are comming from future,0
+you can try to solve this issue and remove this hack Pall spells with this problem are channeled spell,0
+This is wrong The slow attack effects will stack if you remove this rule,0
+tested fixed the problem,0
+Just checking in anything that needs fixing,0
+Also did some more hungarian notation cleanup when I noticed it charminfo mostly,0
+These 3 ifs can be replaced with if icewall,0
+remove the empty line,0
+remove the last comma,0
+if you really wanna contribute create pull requests,0
+I don t think this code belongs in the main dialog Can we move it to updatedialog,1
+Later some flag (build time or runtime) could be added for making unit-testing possible.,1

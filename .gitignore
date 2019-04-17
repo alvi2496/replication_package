@@ -1,0 +1,4 @@
+*.ipynb_checkpoints
+.idea
+data/pre_trained_word_vectors/
+*__pycache__
