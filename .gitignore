@@ -2,3 +2,4 @@
 .idea
 data/pre_trained_word_vectors/
 *__pycache__
+venv
